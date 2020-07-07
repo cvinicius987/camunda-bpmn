@@ -1,0 +1,7 @@
+feign:
+  client:
+    config:
+      remoteRuntimeService:
+        url: "http://localhost:8100/engine-rest/"
+      remoteRepositoryService:
+        url: "http://localhost:8100/engine-rest/"

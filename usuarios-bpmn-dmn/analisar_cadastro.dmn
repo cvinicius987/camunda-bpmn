@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0otkcgk" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.0.0">
+  <decision id="analisar-cadastro" name="Table de Emails">
+    <decisionTable id="DecisionTable_0lxi3t6">
+      <input id="Input_1" label="email" camunda:inputVariable="email">
+        <inputExpression id="InputExpression_1" typeRef="boolean" expressionLanguage="juel">
+          <text>email.contains("gmail")</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Approved" name="approved" typeRef="boolean" />
+      <rule id="DecisionRule_11sw9er">
+        <inputEntry id="UnaryTests_12my8o7">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dor06j">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s6scxh">
+        <inputEntry id="UnaryTests_1r7jddf">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ys40ol">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
